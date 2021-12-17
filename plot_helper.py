@@ -1,10 +1,9 @@
 import matplotlib.pyplot as plt
 
-def draw_boxplot_comparision(model_name,score_array):
+def draw_boxplot_comparision(models,score_array):
     fig = plt.figure()
     fig.suptitle("Boxplot model comparison:")
     ax = fig.add_subplot(111)
-    ax.set_title(model_name)
     ax.boxplot(score_array)
     plt.show()
 

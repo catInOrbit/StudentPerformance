@@ -25,14 +25,14 @@ def model_comparison(model_type, k_splits, data_features, target):
             result_scores.append(result)
             print("%s: %.3f (%.3f)" % (name, result.mean(), result.std()))
 
-            draw_boxplot_comparision(name, result_scores)
+        draw_boxplot_comparision(models_plain_reg, result_scores)
     elif model_type == "RE_OT":
         for name, model in models_other_reg:
             result = cross_val_score(model, data_features, target, cv=kfold, scoring="r2")
             result_scores.append(result)
             print("%s: %.3f (%.3f)" % (name, result.mean(), result.std()))
 
-            draw_boxplot_comparision(name, result_scores)
+        draw_boxplot_comparision(models_plain_reg, result_scores)
     elif model_type == "RE_Reg":
         for name, model in models_regularized_reg:
             estimator = Pipeline([("regularized_regression", model)])
