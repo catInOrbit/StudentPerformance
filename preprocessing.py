@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 
-
 def data_preprocessing(dataframe):
     encoding_cols = dataframe.dtypes[dataframe.dtypes == object]  # Masking
     encoding_cols = encoding_cols.index.tolist()
@@ -22,10 +21,14 @@ def data_preprocessing(dataframe):
         new_df = pd.DataFrame(new_encoded_data.toarray(), index=data_encoded.index, columns=col_names)
         data_encoded = pd.concat([data_encoded, new_df], axis=1)
 
+
+
+
     print("Encoded Dataframe: ", data_encoded)
     print(data_encoded.columns)
     print(data_encoded.info())
     return data_encoded
+
 
 # def EDA(original_df, processed_df):
 #     print("Head: ", original_df.head())
