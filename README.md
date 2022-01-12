@@ -3,12 +3,12 @@ A small project for building and comparing different ML models for StudentPerfor
 https://archive.ics.uci.edu/ml/datasets/student%2Bperformance
 
 
-# 1 Exploratory Data Analysis 
-Pandas library is used for loading and processing of CSV
-
-
-# 2 Data Preprocessing
+# 1 Data Preprocessing
 `LabelEncoder` and `OneHotEncoder` is used for encoding categorical data, no scaling is used at the moment
+
+# 2 FeatureEngineering
+`MinMaxScaler` for G1,G2,G3 column
+`Boxcot` transofrmation applied to G3 column to ensure G3 is closer to normal distribution
 
 # 3 Model Building
 List of models used in comparision.py:
@@ -21,10 +21,6 @@ List of models used in comparision.py:
     - KNeighborsRegressor
     - DecisionTreeRegressor
     - SVR 
- ### Classification
-    - LogisticRegression
-    - KNeighborClassifier
-    - DecisionTree
     
  # 4 Usage:
- Run `main.py` to see comparision result from different model, current result indicate best predictor as RidgeRegression
+ Run `main.py` or access [Jupyter ipynb file](https://github.com/catInOrbit/StudentPerformance/blob/main/StudentPerformance.ipynb) to see comparision result from different model, current result indicate best predictor as RidgeRegression
