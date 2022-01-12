@@ -23,4 +23,4 @@ List of models used in comparision.py:
     - SVR 
     
  # 4 Usage:
- Run `main.py` to see comparision result from different model, current result indicate best predictor as RidgeRegression
+ Run `main.py` or access [Jupyter ipynb file](https://github.com/catInOrbit/StudentPerformance/blob/main/StudentPerformance.ipynb) to see comparision result from different model, current result indicate best predictor as RidgeRegression
