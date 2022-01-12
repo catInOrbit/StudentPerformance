@@ -44,10 +44,5 @@ def normalizing(dataframe):
     dataframe.iloc[:, -1:] = boxcox_G3[0]
 
     return dataframe
-# def EDA(original_df, processed_df):
-#     print("Head: ", original_df.head())
-#     print("Dataframe info: ", original_df.head())
-#     print(processed_df.info())
-
 
 

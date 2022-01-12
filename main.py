@@ -18,7 +18,7 @@ data = normalizing(data)
 
 data_encoded = data_preprocessing(data)
 feature_cols = [x for x in data_encoded.columns if x != "G3"]
-sns.heatmap(data_encoded[feature_cols])
+# sns.heatmap(data_encoded[feature_cols])
 plt.show()
 
 X_data = data_encoded[feature_cols]
